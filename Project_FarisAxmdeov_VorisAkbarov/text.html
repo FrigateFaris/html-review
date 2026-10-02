@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML Review Website - Text formatting">
+  <title>Text formatting | HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.svg" alt="HTML Review logo" width="48" height="48">
+      <div>
+        <p class="site-title">HTML Review Website</p>
+        <p class="site-subtitle">Definitions, attributes and examples of the main HTML tags</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="text.html" class="active">Text</a></li>
+        <li><a href="links.html">Links &amp; Media</a></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="media.html">Multimedia</a></li>
+        <li><a href="semantic.html">Semantic</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Page 2 &ndash; Text Formatting Tags</h1>
+      <p>These tags are used to write titles, paragraphs and to give a meaning or a style to words.</p>
+      <ul class="toc">
+        <li><a href="#h1-h6">&lt;h1&gt; ... &lt;h6&gt;</a></li>
+        <li><a href="#p">&lt;p&gt;</a></li>
+        <li><a href="#br">&lt;br&gt;</a></li>
+        <li><a href="#hr">&lt;hr&gt;</a></li>
+        <li><a href="#strong-and-b">&lt;strong&gt; and &lt;b&gt;</a></li>
+        <li><a href="#em-and-i">&lt;em&gt; and &lt;i&gt;</a></li>
+        <li><a href="#mark">&lt;mark&gt;</a></li>
+        <li><a href="#small">&lt;small&gt;</a></li>
+        <li><a href="#sub-and-sup">&lt;sub&gt; and &lt;sup&gt;</a></li>
+        <li><a href="#del-and-ins">&lt;del&gt; and &lt;ins&gt;</a></li>
+        <li><a href="#blockquote">&lt;blockquote&gt;</a></li>
+        <li><a href="#q">&lt;q&gt;</a></li>
+        <li><a href="#abbr">&lt;abbr&gt;</a></li>
+        <li><a href="#code-and-pre">&lt;code&gt; and &lt;pre&gt;</a></li>
+        <li><a href="#span">&lt;span&gt;</a></li>
+      </ul>
+    </section>
+
+    <section class="tag" id="h1-h6">
+      <h2 class="tag-name">&lt;h1&gt; ... &lt;h6&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Headings. <code>h1</code> is the most important title, <code>h6</code> the least important.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>id</code></td><td>Unique name, useful for links to this title.</td></tr>
+          <tr><td><code>class</code></td><td>Groups elements for CSS.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h6>Heading 6</h6>
+      </div>
+    </section>
+
+    <section class="tag" id="p">
+      <h2 class="tag-name">&lt;p&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A paragraph of text.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>title</code></td><td>Tooltip shown when the mouse is over the paragraph.</td></tr>
+          <tr><td><code>class</code></td><td>Groups elements for CSS.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;p title=&quot;A paragraph&quot;&gt;This is a paragraph of text.&lt;/p&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p title="A paragraph">This is a paragraph of text.</p>
+      </div>
+    </section>
+
+    <section class="tag" id="br">
+      <h2 class="tag-name">&lt;br&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A line break inside a text. It is an empty tag (no closing tag).</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;p&gt;First line&lt;br&gt;Second line&lt;/p&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p>First line<br>Second line</p>
+      </div>
+    </section>
+
+    <section class="tag" id="hr">
+      <h2 class="tag-name">&lt;hr&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A horizontal line that separates two parts of the content. It is an empty tag.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes; the look is changed with CSS.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;p&gt;Part one&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Part two&lt;/p&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p>Part one</p>
+<hr>
+<p>Part two</p>
+      </div>
+    </section>
+
+    <section class="tag" id="strong-and-b">
+      <h2 class="tag-name">&lt;strong&gt; and &lt;b&gt;</h2>
+
+      <h3>Definition</h3>
+      <p><code>strong</code> marks important text (bold); <code>b</code> makes text bold without extra importance.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt; this is important. &lt;b&gt;Bold text&lt;/b&gt;.&lt;/p&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p><strong>Warning:</strong> this is important. <b>Bold text</b>.</p>
+      </div>
+    </section>
+
+    <section class="tag" id="em-and-i">
+      <h2 class="tag-name">&lt;em&gt; and &lt;i&gt;</h2>
+
+      <h3>Definition</h3>
+      <p><code>em</code> stresses a word (italic); <code>i</code> writes text in italic (technical term, foreign word).</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;p&gt;I &lt;em&gt;really&lt;/em&gt; like HTML. &lt;i&gt;Bonjour&lt;/i&gt; means hello.&lt;/p&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p>I <em>really</em> like HTML. <i>Bonjour</i> means hello.</p>
+      </div>
+    </section>
+
+    <section class="tag" id="mark">
+      <h2 class="tag-name">&lt;mark&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Highlights a part of the text.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;p&gt;Do not forget the &lt;mark&gt;closing tag&lt;/mark&gt;.&lt;/p&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p>Do not forget the <mark>closing tag</mark>.</p>
+      </div>
+    </section>
+
+    <section class="tag" id="small">
+      <h2 class="tag-name">&lt;small&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Writes smaller text, such as a legal note.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;p&gt;Price: 100$ &lt;small&gt;(taxes not included)&lt;/small&gt;&lt;/p&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p>Price: 100$ <small>(taxes not included)</small></p>
+      </div>
+    </section>
+
+    <section class="tag" id="sub-and-sup">
+      <h2 class="tag-name">&lt;sub&gt; and &lt;sup&gt;</h2>
+
+      <h3>Definition</h3>
+      <p><code>sub</code> writes text below the line (subscript); <code>sup</code> writes text above the line (superscript).</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;p&gt;H&lt;sub&gt;2&lt;/sub&gt;O and 10&lt;sup&gt;2&lt;/sup&gt; = 100&lt;/p&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p>H<sub>2</sub>O and 10<sup>2</sup> = 100</p>
+      </div>
+    </section>
+
+    <section class="tag" id="del-and-ins">
+      <h2 class="tag-name">&lt;del&gt; and &lt;ins&gt;</h2>
+
+      <h3>Definition</h3>
+      <p><code>del</code> shows deleted text (crossed out); <code>ins</code> shows inserted text (underlined).</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>cite</code></td><td>URL that explains the change.</td></tr>
+          <tr><td><code>datetime</code></td><td>Date and time of the change.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;p&gt;Price: &lt;del&gt;50$&lt;/del&gt; &lt;ins datetime=&quot;2026-10-01&quot;&gt;35$&lt;/ins&gt;&lt;/p&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p>Price: <del>50$</del> <ins datetime="2026-10-01">35$</ins></p>
+      </div>
+    </section>
+
+    <section class="tag" id="blockquote">
+      <h2 class="tag-name">&lt;blockquote&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A long quotation taken from another source, displayed as an indented block.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>cite</code></td><td>URL of the source of the quotation.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;blockquote cite=&quot;https://www.w3.org/&quot;&gt;
+  The Web is for everyone.
+&lt;/blockquote&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<blockquote cite="https://www.w3.org/">
+  The Web is for everyone.
+</blockquote>
+      </div>
+    </section>
+
+    <section class="tag" id="q">
+      <h2 class="tag-name">&lt;q&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A short quotation inside a sentence. The browser adds quotation marks.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>cite</code></td><td>URL of the source of the quotation.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;p&gt;The teacher said: &lt;q&gt;Always close your tags&lt;/q&gt;.&lt;/p&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p>The teacher said: <q>Always close your tags</q>.</p>
+      </div>
+    </section>
+
+    <section class="tag" id="abbr">
+      <h2 class="tag-name">&lt;abbr&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>An abbreviation. The full meaning appears when the mouse is over it.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>title</code></td><td>Full meaning of the abbreviation.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;p&gt;&lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; is easy.&lt;/p&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p><abbr title="HyperText Markup Language">HTML</abbr> is easy.</p>
+      </div>
+    </section>
+
+    <section class="tag" id="code-and-pre">
+      <h2 class="tag-name">&lt;code&gt; and &lt;pre&gt;</h2>
+
+      <h3>Definition</h3>
+      <p><code>code</code> shows computer code; <code>pre</code> keeps spaces and line breaks exactly as they are written.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;pre&gt;&lt;code&gt;let x = 5;
+console.log(x);&lt;/code&gt;&lt;/pre&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<pre><code>let x = 5;
+console.log(x);</code></pre>
+      </div>
+    </section>
+
+    <section class="tag" id="span">
+      <h2 class="tag-name">&lt;span&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>An inline container without meaning, used to style a small part of a text with CSS.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>class</code></td><td>Name used by CSS to style the text.</td></tr>
+          <tr><td><code>id</code></td><td>Unique name of the element.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;p&gt;This word is &lt;span class=&quot;highlight&quot;&gt;styled&lt;/span&gt; with CSS.&lt;/p&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p>This word is <span class="highlight">styled</span> with CSS.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML Review Website &copy; 2026 &mdash; Project_fullname1_fullname2</p>
+    <p><a href="#top">Back to top</a> &middot; <a href="index.html">Home</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML Review Website - Forms">
+  <title>Forms | HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.svg" alt="HTML Review logo" width="48" height="48">
+      <div>
+        <p class="site-title">HTML Review Website</p>
+        <p class="site-subtitle">Definitions, attributes and examples of the main HTML tags</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="text.html">Text</a></li>
+        <li><a href="links.html">Links &amp; Media</a></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="forms.html" class="active">Forms</a></li>
+        <li><a href="media.html">Multimedia</a></li>
+        <li><a href="semantic.html">Semantic</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Page 6 &ndash; Forms</h1>
+      <p>Forms let the user enter information and send it to a server.</p>
+      <ul class="toc">
+        <li><a href="#form">&lt;form&gt;</a></li>
+        <li><a href="#label">&lt;label&gt;</a></li>
+        <li><a href="#input">&lt;input&gt;</a></li>
+        <li><a href="#textarea">&lt;textarea&gt;</a></li>
+        <li><a href="#select-and-option">&lt;select&gt; and &lt;option&gt;</a></li>
+        <li><a href="#button">&lt;button&gt;</a></li>
+        <li><a href="#fieldset-and-legend">&lt;fieldset&gt; and &lt;legend&gt;</a></li>
+        <li><a href="#datalist">&lt;datalist&gt;</a></li>
+      </ul>
+    </section>
+
+    <section class="tag" id="form">
+      <h2 class="tag-name">&lt;form&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A container for input fields. It sends the data when the user submits it.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>action</code></td><td>URL where the data is sent.</td></tr>
+          <tr><td><code>method</code></td><td>How the data is sent: <code>get</code> or <code>post</code>.</td></tr>
+          <tr><td><code>name</code></td><td>Name of the form.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;form action=&quot;#&quot; method=&quot;post&quot;&gt;
+  &lt;input type=&quot;text&quot; name=&quot;city&quot; placeholder=&quot;Your city&quot;&gt;
+  &lt;button type=&quot;submit&quot;&gt;Send&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<form action="#" method="post">
+  <input type="text" name="city" placeholder="Your city">
+  <button type="submit">Send</button>
+</form>
+      </div>
+    </section>
+
+    <section class="tag" id="label">
+      <h2 class="tag-name">&lt;label&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A text that describes a field. Clicking it selects the field.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>for</code></td><td>The <code>id</code> of the field it is linked to.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;label for=&quot;user&quot;&gt;Username:&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;user&quot; name=&quot;user&quot;&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<label for="user">Username:</label>
+<input type="text" id="user" name="user">
+      </div>
+    </section>
+
+    <section class="tag" id="input">
+      <h2 class="tag-name">&lt;input&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A field to enter data. Its kind depends on the <code>type</code> attribute. It is an empty tag.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>type</code></td><td>Kind of field: <code>text</code>, <code>email</code>, <code>password</code>, <code>number</code>, <code>date</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, <code>submit</code>...</td></tr>
+          <tr><td><code>name</code></td><td>Name of the data sent to the server.</td></tr>
+          <tr><td><code>value</code></td><td>Default value.</td></tr>
+          <tr><td><code>placeholder</code></td><td>Grey help text in the empty field.</td></tr>
+          <tr><td><code>required</code></td><td>The field must be filled.</td></tr>
+          <tr><td><code>min / max</code></td><td>Minimum and maximum values.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;form action=&quot;#&quot;&gt;
+  &lt;p&gt;&lt;label for=&quot;em&quot;&gt;E-mail:&lt;/label&gt; &lt;input type=&quot;email&quot; id=&quot;em&quot; name=&quot;email&quot; placeholder=&quot;name@mail.com&quot; required&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label for=&quot;pw&quot;&gt;Password:&lt;/label&gt; &lt;input type=&quot;password&quot; id=&quot;pw&quot; name=&quot;pw&quot;&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label for=&quot;age&quot;&gt;Age:&lt;/label&gt; &lt;input type=&quot;number&quot; id=&quot;age&quot; name=&quot;age&quot; min=&quot;10&quot; max=&quot;99&quot;&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label for=&quot;bd&quot;&gt;Birthday:&lt;/label&gt; &lt;input type=&quot;date&quot; id=&quot;bd&quot; name=&quot;bd&quot;&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input type=&quot;checkbox&quot; id=&quot;news&quot; name=&quot;news&quot;&gt; &lt;label for=&quot;news&quot;&gt;Newsletter&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input type=&quot;radio&quot; id=&quot;m&quot; name=&quot;g&quot; value=&quot;m&quot;&gt; &lt;label for=&quot;m&quot;&gt;Male&lt;/label&gt;
+     &lt;input type=&quot;radio&quot; id=&quot;f&quot; name=&quot;g&quot; value=&quot;f&quot;&gt; &lt;label for=&quot;f&quot;&gt;Female&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input type=&quot;submit&quot; value=&quot;Send&quot;&gt; &lt;input type=&quot;reset&quot; value=&quot;Reset&quot;&gt;&lt;/p&gt;
+&lt;/form&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<form action="#">
+  <p><label for="em">E-mail:</label> <input type="email" id="em" name="email" placeholder="name@mail.com" required></p>
+  <p><label for="pw">Password:</label> <input type="password" id="pw" name="pw"></p>
+  <p><label for="age">Age:</label> <input type="number" id="age" name="age" min="10" max="99"></p>
+  <p><label for="bd">Birthday:</label> <input type="date" id="bd" name="bd"></p>
+  <p><input type="checkbox" id="news" name="news"> <label for="news">Newsletter</label></p>
+  <p><input type="radio" id="m" name="g" value="m"> <label for="m">Male</label>
+     <input type="radio" id="f" name="g" value="f"> <label for="f">Female</label></p>
+  <p><input type="submit" value="Send"> <input type="reset" value="Reset"></p>
+</form>
+      </div>
+    </section>
+
+    <section class="tag" id="textarea">
+      <h2 class="tag-name">&lt;textarea&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A field for long text on several lines.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>rows / cols</code></td><td>Height and width in lines and characters.</td></tr>
+          <tr><td><code>name</code></td><td>Name of the data.</td></tr>
+          <tr><td><code>placeholder</code></td><td>Help text.</td></tr>
+          <tr><td><code>maxlength</code></td><td>Maximum number of characters.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;label for=&quot;msg&quot;&gt;Message:&lt;/label&gt;&lt;br&gt;
+&lt;textarea id=&quot;msg&quot; name=&quot;msg&quot; rows=&quot;4&quot; cols=&quot;40&quot; placeholder=&quot;Write your message&quot;&gt;&lt;/textarea&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<label for="msg">Message:</label><br>
+<textarea id="msg" name="msg" rows="4" cols="40" placeholder="Write your message"></textarea>
+      </div>
+    </section>
+
+    <section class="tag" id="select-and-option">
+      <h2 class="tag-name">&lt;select&gt; and &lt;option&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A drop-down list. Each choice is an <code>option</code>.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>name</code></td><td>Name of the data (on <code>select</code>).</td></tr>
+          <tr><td><code>multiple</code></td><td>Allows several choices (on <code>select</code>).</td></tr>
+          <tr><td><code>value</code></td><td>Value sent to the server (on <code>option</code>).</td></tr>
+          <tr><td><code>selected</code></td><td>Option chosen by default.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;label for=&quot;lang&quot;&gt;Language:&lt;/label&gt;
+&lt;select id=&quot;lang&quot; name=&quot;lang&quot;&gt;
+  &lt;option value=&quot;en&quot;&gt;English&lt;/option&gt;
+  &lt;option value=&quot;fr&quot; selected&gt;French&lt;/option&gt;
+  &lt;option value=&quot;ar&quot;&gt;Arabic&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<label for="lang">Language:</label>
+<select id="lang" name="lang">
+  <option value="en">English</option>
+  <option value="fr" selected>French</option>
+  <option value="ar">Arabic</option>
+</select>
+      </div>
+    </section>
+
+    <section class="tag" id="button">
+      <h2 class="tag-name">&lt;button&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A clickable button.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>type</code></td><td><code>submit</code> (send the form), <code>reset</code> (empty the form) or <code>button</code> (no action).</td></tr>
+          <tr><td><code>disabled</code></td><td>The button cannot be clicked.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;button type=&quot;button&quot;&gt;Click me&lt;/button&gt;
+&lt;button type=&quot;button&quot; disabled&gt;Disabled&lt;/button&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<button type="button">Click me</button>
+<button type="button" disabled>Disabled</button>
+      </div>
+    </section>
+
+    <section class="tag" id="fieldset-and-legend">
+      <h2 class="tag-name">&lt;fieldset&gt; and &lt;legend&gt;</h2>
+
+      <h3>Definition</h3>
+      <p><code>fieldset</code> groups related fields in a box; <code>legend</code> is the title of the box.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>disabled</code></td><td>Disables all the fields of the group (on <code>fieldset</code>).</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;fieldset&gt;
+  &lt;legend&gt;Personal information&lt;/legend&gt;
+  &lt;label for=&quot;fn&quot;&gt;First name:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;fn&quot; name=&quot;fn&quot;&gt;
+&lt;/fieldset&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<fieldset>
+  <legend>Personal information</legend>
+  <label for="fn">First name:</label>
+  <input type="text" id="fn" name="fn">
+</fieldset>
+      </div>
+    </section>
+
+    <section class="tag" id="datalist">
+      <h2 class="tag-name">&lt;datalist&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A list of suggestions for an <code>input</code> field.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>id</code></td><td>Name used by the <code>list</code> attribute of the input.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;label for=&quot;br&quot;&gt;Browser:&lt;/label&gt;
+&lt;input list=&quot;browsers&quot; id=&quot;br&quot; name=&quot;br&quot;&gt;
+&lt;datalist id=&quot;browsers&quot;&gt;
+  &lt;option value=&quot;Chrome&quot;&gt;
+  &lt;option value=&quot;Firefox&quot;&gt;
+  &lt;option value=&quot;Edge&quot;&gt;
+&lt;/datalist&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<label for="br">Browser:</label>
+<input list="browsers" id="br" name="br">
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Edge">
+</datalist>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML Review Website &copy; 2026 &mdash; Project_fullname1_fullname2</p>
+    <p><a href="#top">Back to top</a> &middot; <a href="index.html">Home</a></p>
+  </footer>
+</body>
+</html>

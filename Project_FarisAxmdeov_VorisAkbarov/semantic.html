@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML Review Website - Semantic and layout">
+  <title>Semantic and layout | HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.svg" alt="HTML Review logo" width="48" height="48">
+      <div>
+        <p class="site-title">HTML Review Website</p>
+        <p class="site-subtitle">Definitions, attributes and examples of the main HTML tags</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="text.html">Text</a></li>
+        <li><a href="links.html">Links &amp; Media</a></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="media.html">Multimedia</a></li>
+        <li><a href="semantic.html" class="active">Semantic</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Page 8 &ndash; Semantic &amp; Layout Tags</h1>
+      <p>Semantic tags describe the role of each part of the page. They help search engines, screen readers and developers. The example below shows a full page layout.</p>
+      <ul class="toc">
+        <li><a href="#full-layout">Full layout</a></li>
+        <li><a href="#header">&lt;header&gt;</a></li>
+        <li><a href="#nav">&lt;nav&gt;</a></li>
+        <li><a href="#main">&lt;main&gt;</a></li>
+        <li><a href="#section">&lt;section&gt;</a></li>
+        <li><a href="#article">&lt;article&gt;</a></li>
+        <li><a href="#aside">&lt;aside&gt;</a></li>
+        <li><a href="#footer">&lt;footer&gt;</a></li>
+        <li><a href="#div">&lt;div&gt;</a></li>
+        <li><a href="#address">&lt;address&gt;</a></li>
+        <li><a href="#time">&lt;time&gt;</a></li>
+        <li><a href="#details-and-summary">&lt;details&gt; and &lt;summary&gt;</a></li>
+      </ul>
+    </section>
+
+    <section class="tag" id="full-layout">
+      <h2 class="tag-name">Full layout</h2>
+
+      <h3>Definition</h3>
+      <p>A typical page built with semantic tags.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Each part is styled with CSS Flexbox.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;div class=&quot;layout-demo&quot;&gt;
+  &lt;header&gt;header&lt;/header&gt;
+  &lt;nav&gt;nav&lt;/nav&gt;
+  &lt;div class=&quot;layout-middle&quot;&gt;
+    &lt;main&gt;
+      &lt;article&gt;article
+        &lt;section&gt;section&lt;/section&gt;
+      &lt;/article&gt;
+    &lt;/main&gt;
+    &lt;aside&gt;aside&lt;/aside&gt;
+  &lt;/div&gt;
+  &lt;footer&gt;footer&lt;/footer&gt;
+&lt;/div&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<div class="layout-demo">
+  <header>header</header>
+  <nav>nav</nav>
+  <div class="layout-middle">
+    <main>
+      <article>article
+        <section>section</section>
+      </article>
+    </main>
+    <aside>aside</aside>
+  </div>
+  <footer>footer</footer>
+</div>
+      </div>
+    </section>
+
+    <section class="tag" id="header">
+      <h2 class="tag-name">&lt;header&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>The top part of a page or of a section: logo, title, menu.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;header&gt;
+  &lt;h3&gt;My Website&lt;/h3&gt;
+  &lt;p&gt;Learn HTML&lt;/p&gt;
+&lt;/header&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<header>
+  <h3>My Website</h3>
+  <p>Learn HTML</p>
+</header>
+      </div>
+    </section>
+
+    <section class="tag" id="nav">
+      <h2 class="tag-name">&lt;nav&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A block of navigation links (the menu).</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;nav&gt;
+  &lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt; |
+  &lt;a href=&quot;text.html&quot;&gt;Text&lt;/a&gt; |
+  &lt;a href=&quot;forms.html&quot;&gt;Forms&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<nav>
+  <a href="index.html">Home</a> |
+  <a href="text.html">Text</a> |
+  <a href="forms.html">Forms</a>
+</nav>
+      </div>
+    </section>
+
+    <section class="tag" id="main">
+      <h2 class="tag-name">&lt;main&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>The main content of the page. There is only one <code>main</code> per page.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;main&gt;
+  &lt;p&gt;The main content goes here.&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<div class="like-main"><p>The main content goes here.</p></div>
+      </div>
+    </section>
+
+    <section class="tag" id="section">
+      <h2 class="tag-name">&lt;section&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A part of the page about one topic, usually with a title.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;section&gt;
+  &lt;h3&gt;Our courses&lt;/h3&gt;
+  &lt;p&gt;HTML, CSS and JavaScript.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<section>
+  <h3>Our courses</h3>
+  <p>HTML, CSS and JavaScript.</p>
+</section>
+      </div>
+    </section>
+
+    <section class="tag" id="article">
+      <h2 class="tag-name">&lt;article&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Independent content that has a meaning alone: a blog post, a news article, a comment.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;article&gt;
+  &lt;h3&gt;New course&lt;/h3&gt;
+  &lt;p&gt;The HTML course starts on Monday.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<article>
+  <h3>New course</h3>
+  <p>The HTML course starts on Monday.</p>
+</article>
+      </div>
+    </section>
+
+    <section class="tag" id="aside">
+      <h2 class="tag-name">&lt;aside&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Content related to the main content but separate: a sidebar, a tip, ads.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;aside&gt;
+  &lt;p&gt;&lt;strong&gt;Tip:&lt;/strong&gt; always close your tags.&lt;/p&gt;
+&lt;/aside&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<aside>
+  <p><strong>Tip:</strong> always close your tags.</p>
+</aside>
+      </div>
+    </section>
+
+    <section class="tag" id="footer">
+      <h2 class="tag-name">&lt;footer&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>The bottom part of a page or section: copyright, contact, links.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;footer&gt;
+  &lt;p&gt;&amp;copy; 2026 My Website&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<footer>
+  <p>&copy; 2026 My Website</p>
+</footer>
+      </div>
+    </section>
+
+    <section class="tag" id="div">
+      <h2 class="tag-name">&lt;div&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A block container without meaning, used to group elements for layout with CSS.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>class</code></td><td>Name used by CSS.</td></tr>
+          <tr><td><code>id</code></td><td>Unique name.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;div class=&quot;box&quot;&gt;
+  &lt;p&gt;Content inside a div.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<div class="box">
+  <p>Content inside a div.</p>
+</div>
+      </div>
+    </section>
+
+    <section class="tag" id="address">
+      <h2 class="tag-name">&lt;address&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Contact information of the author or owner.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;address&gt;
+  Written by Ali and Sara&lt;br&gt;
+  &lt;a href=&quot;mailto:info.moumni.nourchen@gmail.com&quot;&gt;info.moumni.nourchen@gmail.com&lt;/a&gt;
+&lt;/address&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<address>
+  Written by Ali and Sara<br>
+  <a href="mailto:info.moumni.nourchen@gmail.com">info.moumni.nourchen@gmail.com</a>
+</address>
+      </div>
+    </section>
+
+    <section class="tag" id="time">
+      <h2 class="tag-name">&lt;time&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A date or a time, readable by computers.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>datetime</code></td><td>The date/time in machine format, e.g. <code>2026-10-02</code>.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;p&gt;The exam is on &lt;time datetime=&quot;2026-10-15&quot;&gt;October 15&lt;/time&gt;.&lt;/p&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p>The exam is on <time datetime="2026-10-15">October 15</time>.</p>
+      </div>
+    </section>
+
+    <section class="tag" id="details-and-summary">
+      <h2 class="tag-name">&lt;details&gt; and &lt;summary&gt;</h2>
+
+      <h3>Definition</h3>
+      <p><code>details</code> is a box that the user can open or close; <code>summary</code> is its visible title.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>open</code></td><td>The box is open by default (on <code>details</code>).</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;details&gt;
+  &lt;summary&gt;Show the answer&lt;/summary&gt;
+  &lt;p&gt;HTML means HyperText Markup Language.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<details>
+  <summary>Show the answer</summary>
+  <p>HTML means HyperText Markup Language.</p>
+</details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML Review Website &copy; 2026 &mdash; Project_fullname1_fullname2</p>
+    <p><a href="#top">Back to top</a> &middot; <a href="index.html">Home</a></p>
+  </footer>
+</body>
+</html>

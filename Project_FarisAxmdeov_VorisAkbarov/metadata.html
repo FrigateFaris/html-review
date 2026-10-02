@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML Review Website - Metadata">
+  <title>Metadata | HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.svg" alt="HTML Review logo" width="48" height="48">
+      <div>
+        <p class="site-title">HTML Review Website</p>
+        <p class="site-subtitle">Definitions, attributes and examples of the main HTML tags</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="text.html">Text</a></li>
+        <li><a href="links.html">Links &amp; Media</a></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="media.html">Multimedia</a></li>
+        <li><a href="semantic.html">Semantic</a></li>
+        <li><a href="metadata.html" class="active">Metadata</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Page 9 &ndash; Metadata</h1>
+      <p>Metadata tags are written in the &lt;head&gt;. They give information about the page to the browser and to search engines. They are not displayed in the page.</p>
+      <ul class="toc">
+        <li><a href="#title">&lt;title&gt;</a></li>
+        <li><a href="#meta-charset">&lt;meta charset&gt;</a></li>
+        <li><a href="#meta-name">&lt;meta name&gt;</a></li>
+        <li><a href="#meta-http-equiv">&lt;meta http-equiv&gt;</a></li>
+        <li><a href="#link">&lt;link&gt;</a></li>
+        <li><a href="#base">&lt;base&gt;</a></li>
+        <li><a href="#script">&lt;script&gt;</a></li>
+        <li><a href="#style">&lt;style&gt;</a></li>
+      </ul>
+    </section>
+
+    <section class="tag" id="title">
+      <h2 class="tag-name">&lt;title&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>The title of the page, shown in the browser tab and in search results.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;title&gt;Metadata | HTML Review&lt;/title&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p class="note">Look at the browser tab: it shows &ldquo;Metadata | HTML Review&rdquo;.</p>
+      </div>
+    </section>
+
+    <section class="tag" id="meta-charset">
+      <h2 class="tag-name">&lt;meta charset&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Gives the character encoding of the page. <code>UTF-8</code> displays all languages and symbols.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>charset</code></td><td>Encoding of the page, usually <code>UTF-8</code>.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p class="note">Thanks to UTF-8 we can show: é à ç &mdash; Привет &mdash; مرحبا &mdash; ✓</p>
+      </div>
+    </section>
+
+    <section class="tag" id="meta-name">
+      <h2 class="tag-name">&lt;meta name&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Gives information about the page: description, author, keywords, viewport for mobiles.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>name</code></td><td>Kind of information: <code>description</code>, <code>author</code>, <code>keywords</code>, <code>viewport</code>.</td></tr>
+          <tr><td><code>content</code></td><td>Value of the information.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;meta name=&quot;description&quot; content=&quot;Review of the main HTML tags&quot;&gt;
+&lt;meta name=&quot;author&quot; content=&quot;Ali, Sara&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;HTML, tags, review&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p class="note">This tag is not displayed in the page: it only gives structure or information to the browser.</p>
+      </div>
+    </section>
+
+    <section class="tag" id="meta-http-equiv">
+      <h2 class="tag-name">&lt;meta http-equiv&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Gives an instruction to the browser, for example refresh the page.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>http-equiv</code></td><td>Kind of instruction, e.g. <code>refresh</code>.</td></tr>
+          <tr><td><code>content</code></td><td>Value, e.g. number of seconds.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;meta http-equiv=&quot;refresh&quot; content=&quot;30&quot;&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p class="note">This tag is not displayed in the page: it only gives structure or information to the browser.</p>
+      </div>
+    </section>
+
+    <section class="tag" id="link">
+      <h2 class="tag-name">&lt;link&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Links the page to an external file: a CSS stylesheet or an icon.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>rel</code></td><td>Relation: <code>stylesheet</code>, <code>icon</code>...</td></tr>
+          <tr><td><code>href</code></td><td>Path of the file.</td></tr>
+          <tr><td><code>type</code></td><td>Format of the file.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
+&lt;link rel=&quot;icon&quot; href=&quot;images/logo.svg&quot; type=&quot;image/svg+xml&quot;&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p class="note">This page uses css/style.css: all colors and the layout you see come from it.</p>
+      </div>
+    </section>
+
+    <section class="tag" id="base">
+      <h2 class="tag-name">&lt;base&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Gives the base URL used by all the relative links of the page.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>href</code></td><td>Base URL.</td></tr>
+          <tr><td><code>target</code></td><td>Default target of all links.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;base href=&quot;https://example.com/&quot; target=&quot;_blank&quot;&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p class="note">This tag is not displayed in the page: it only gives structure or information to the browser.</p>
+      </div>
+    </section>
+
+    <section class="tag" id="script">
+      <h2 class="tag-name">&lt;script&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Adds JavaScript code, written inside or in an external file.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>src</code></td><td>Path of the external .js file.</td></tr>
+          <tr><td><code>defer</code></td><td>Runs the script after the page is loaded.</td></tr>
+          <tr><td><code>async</code></td><td>Loads the script in parallel.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;script src=&quot;js/main.js&quot; defer&gt;&lt;/script&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p class="note">This tag is not displayed in the page: it only gives structure or information to the browser.</p>
+      </div>
+    </section>
+
+    <section class="tag" id="style">
+      <h2 class="tag-name">&lt;style&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Writes CSS inside the page. In this project we do not use it: all CSS is in css/style.css.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>media</code></td><td>Screen type where the CSS is applied.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;style&gt;
+  p { color: blue; }
+&lt;/style&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p class="note">Not used in this project (rule: all CSS goes in style.css).</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML Review Website &copy; 2026 &mdash; Project_fullname1_fullname2</p>
+    <p><a href="#top">Back to top</a> &middot; <a href="index.html">Home</a></p>
+  </footer>
+</body>
+</html>

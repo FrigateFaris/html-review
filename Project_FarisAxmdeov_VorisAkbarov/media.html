@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML Review Website - Multimedia">
+  <title>Multimedia | HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.svg" alt="HTML Review logo" width="48" height="48">
+      <div>
+        <p class="site-title">HTML Review Website</p>
+        <p class="site-subtitle">Definitions, attributes and examples of the main HTML tags</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="text.html">Text</a></li>
+        <li><a href="links.html">Links &amp; Media</a></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="media.html" class="active">Multimedia</a></li>
+        <li><a href="semantic.html">Semantic</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Page 7 &ndash; Multimedia</h1>
+      <p>These tags add rich content: figures with captions, responsive images, other pages, drawings and subtitles.</p>
+      <ul class="toc">
+        <li><a href="#figure-and-figcaption">&lt;figure&gt; and &lt;figcaption&gt;</a></li>
+        <li><a href="#picture">&lt;picture&gt;</a></li>
+        <li><a href="#iframe">&lt;iframe&gt;</a></li>
+        <li><a href="#embed">&lt;embed&gt;</a></li>
+        <li><a href="#svg">&lt;svg&gt;</a></li>
+        <li><a href="#canvas">&lt;canvas&gt;</a></li>
+        <li><a href="#track">&lt;track&gt;</a></li>
+      </ul>
+    </section>
+
+    <section class="tag" id="figure-and-figcaption">
+      <h2 class="tag-name">&lt;figure&gt; and &lt;figcaption&gt;</h2>
+
+      <h3>Definition</h3>
+      <p><code>figure</code> groups an image (or a diagram, code...) with its caption <code>figcaption</code>.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;figure&gt;
+  &lt;img src=&quot;images/photo.svg&quot; alt=&quot;Landscape&quot; width=&quot;300&quot; height=&quot;200&quot;&gt;
+  &lt;figcaption&gt;Figure 1 &amp;ndash; A landscape&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<figure>
+  <img src="images/photo.svg" alt="Landscape" width="300" height="200">
+  <figcaption>Figure 1 &ndash; A landscape</figcaption>
+</figure>
+      </div>
+    </section>
+
+    <section class="tag" id="picture">
+      <h2 class="tag-name">&lt;picture&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Gives several versions of an image; the browser chooses the best one for the screen size.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>It contains <code>source</code> tags and one <code>img</code>.</td></tr>
+          <tr><td><code>srcset (on source)</code></td><td>Image file to use.</td></tr>
+          <tr><td><code>media (on source)</code></td><td>Screen condition, e.g. <code>(max-width: 600px)</code>.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;picture&gt;
+  &lt;source srcset=&quot;images/photo-small.svg&quot; media=&quot;(max-width: 600px)&quot;&gt;
+  &lt;img src=&quot;images/photo.svg&quot; alt=&quot;Responsive landscape&quot; width=&quot;300&quot; height=&quot;200&quot;&gt;
+&lt;/picture&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<picture>
+  <source srcset="images/photo-small.svg" media="(max-width: 600px)">
+  <img src="images/photo.svg" alt="Responsive landscape" width="300" height="200">
+</picture>
+      </div>
+    </section>
+
+    <section class="tag" id="iframe">
+      <h2 class="tag-name">&lt;iframe&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Displays another web page inside the current page (for example a YouTube video or a map).</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>src</code></td><td>URL of the page to show.</td></tr>
+          <tr><td><code>width / height</code></td><td>Size of the frame.</td></tr>
+          <tr><td><code>title</code></td><td>Description of the content (accessibility).</td></tr>
+          <tr><td><code>allowfullscreen</code></td><td>Allows full screen mode.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;iframe src=&quot;lists.html&quot; width=&quot;400&quot; height=&quot;200&quot; title=&quot;Lists page&quot;&gt;&lt;/iframe&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<iframe src="lists.html" width="400" height="200" title="Lists page"></iframe>
+      </div>
+    </section>
+
+    <section class="tag" id="embed">
+      <h2 class="tag-name">&lt;embed&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Inserts external content such as a PDF or an image. It is an empty tag.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>src</code></td><td>Path of the file.</td></tr>
+          <tr><td><code>type</code></td><td>Format of the file.</td></tr>
+          <tr><td><code>width / height</code></td><td>Size of the content.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;embed src=&quot;images/logo.svg&quot; type=&quot;image/svg+xml&quot; width=&quot;80&quot; height=&quot;80&quot;&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<embed src="images/logo.svg" type="image/svg+xml" width="80" height="80">
+      </div>
+    </section>
+
+    <section class="tag" id="svg">
+      <h2 class="tag-name">&lt;svg&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Draws vector graphics (shapes, lines, text) directly in the page.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>width / height</code></td><td>Size of the drawing.</td></tr>
+          <tr><td><code>viewBox</code></td><td>Coordinate system of the drawing.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;svg width=&quot;200&quot; height=&quot;100&quot; viewBox=&quot;0 0 200 100&quot;&gt;
+  &lt;rect x=&quot;10&quot; y=&quot;10&quot; width=&quot;80&quot; height=&quot;80&quot; fill=&quot;#2c3e50&quot;&gt;&lt;/rect&gt;
+  &lt;circle cx=&quot;150&quot; cy=&quot;50&quot; r=&quot;40&quot; fill=&quot;#e67e22&quot;&gt;&lt;/circle&gt;
+&lt;/svg&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<svg width="200" height="100" viewBox="0 0 200 100">
+  <rect x="10" y="10" width="80" height="80" fill="#2c3e50"></rect>
+  <circle cx="150" cy="50" r="40" fill="#e67e22"></circle>
+</svg>
+      </div>
+    </section>
+
+    <section class="tag" id="canvas">
+      <h2 class="tag-name">&lt;canvas&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A drawing area. The drawing is made with JavaScript. The text inside is shown if canvas is not supported.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>width / height</code></td><td>Size of the drawing area.</td></tr>
+          <tr><td><code>id</code></td><td>Name used by JavaScript to draw.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;80&quot;&gt;
+  Your browser does not support canvas.
+&lt;/canvas&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<canvas id="myCanvas" width="200" height="80">
+  Your browser does not support canvas.
+</canvas>
+      </div>
+    </section>
+
+    <section class="tag" id="track">
+      <h2 class="tag-name">&lt;track&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Adds subtitles or captions to a <code>video</code>. It is placed inside the video tag.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>src</code></td><td>Path of the subtitle file (.vtt).</td></tr>
+          <tr><td><code>kind</code></td><td><code>subtitles</code>, <code>captions</code>...</td></tr>
+          <tr><td><code>srclang</code></td><td>Language of the subtitles.</td></tr>
+          <tr><td><code>label</code></td><td>Name shown in the menu.</td></tr>
+          <tr><td><code>default</code></td><td>Subtitles shown by default.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;video controls width=&quot;320&quot;&gt;
+  &lt;source src=&quot;images/video.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;track src=&quot;images/subtitles.vtt&quot; kind=&quot;subtitles&quot; srclang=&quot;en&quot; label=&quot;English&quot; default&gt;
+&lt;/video&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<video controls width="320">
+  <source src="images/video.mp4" type="video/mp4">
+  <track src="images/subtitles.vtt" kind="subtitles" srclang="en" label="English" default>
+</video>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML Review Website &copy; 2026 &mdash; Project_fullname1_fullname2</p>
+    <p><a href="#top">Back to top</a> &middot; <a href="index.html">Home</a></p>
+  </footer>
+</body>
+</html>

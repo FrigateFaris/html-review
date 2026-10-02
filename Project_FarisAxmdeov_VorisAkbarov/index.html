@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML Review Website - Home">
+  <title>Home | HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.svg" alt="HTML Review logo" width="48" height="48">
+      <div>
+        <p class="site-title">HTML Review Website</p>
+        <p class="site-subtitle">Definitions, attributes and examples of the main HTML tags</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="text.html">Text</a></li>
+        <li><a href="links.html">Links &amp; Media</a></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="media.html">Multimedia</a></li>
+        <li><a href="semantic.html">Semantic</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Page 1 &ndash; Home &amp; Page Structure</h1>
+      <p>Welcome to our HTML review website. Every page presents one family of tags with its definition, its attributes and an example. This first page explains the basic structure of every HTML document.</p>
+      <ul class="toc">
+        <li><a href="#doctype-html">&lt;!DOCTYPE html&gt;</a></li>
+        <li><a href="#html">&lt;html&gt;</a></li>
+        <li><a href="#head">&lt;head&gt;</a></li>
+        <li><a href="#body">&lt;body&gt;</a></li>
+        <li><a href="#comment">&lt;!-- comment --&gt;</a></li>
+      </ul>
+    </section>
+
+    <section class="tag" id="doctype-html">
+      <h2 class="tag-name">&lt;!DOCTYPE html&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>The document type declaration. It is the first line of every page and tells the browser to use the HTML5 standard.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>html</code></td><td>Declares the HTML5 document type (no other value is needed).</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p class="note">This tag is not displayed in the page: it only gives structure or information to the browser.</p>
+      </div>
+    </section>
+
+    <section class="tag" id="html">
+      <h2 class="tag-name">&lt;html&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>The root element. It contains all the other elements of the page.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>lang</code></td><td>Language of the page content (e.g. <code>en</code>, <code>fr</code>).</td></tr>
+          <tr><td><code>dir</code></td><td>Text direction: <code>ltr</code> or <code>rtl</code>.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;html lang=&quot;en&quot;&gt;
+  ...
+&lt;/html&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p class="note">This tag is not displayed in the page: it only gives structure or information to the browser.</p>
+      </div>
+    </section>
+
+    <section class="tag" id="head">
+      <h2 class="tag-name">&lt;head&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Contains information about the page (title, metadata, links to CSS). Its content is not shown in the page.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes; it contains <code>title</code>, <code>meta</code>, <code>link</code>, <code>script</code>.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;My page&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
+&lt;/head&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p class="note">This tag is not displayed in the page: it only gives structure or information to the browser.</p>
+      </div>
+    </section>
+
+    <section class="tag" id="body">
+      <h2 class="tag-name">&lt;body&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>Contains all the visible content of the page: text, images, links, tables, forms...</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>id / class</code></td><td>Identify or group the element for CSS.</td></tr>
+          <tr><td><code>onload</code></td><td>Script that runs when the page is loaded.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;body&gt;
+  &lt;h1&gt;Hello world&lt;/h1&gt;
+  &lt;p&gt;My first web page.&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<h1>Hello world</h1>
+<p>My first web page.</p>
+      </div>
+    </section>
+
+    <section class="tag" id="comment">
+      <h2 class="tag-name">&lt;!-- comment --&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A comment. It is used to write notes in the code; the browser does not display it.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Comments have no attributes.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;p&gt;Visible text&lt;/p&gt;
+&lt;!-- This comment is not visible --&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<p>Visible text</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML Review Website &copy; 2026 &mdash; Project_FarisAxmdeov_VorisAkbarov</p>
+    <p><a href="#top">Back to top</a> &middot; <a href="index.html">Home</a></p>
+  </footer>
+</body>
+</html>

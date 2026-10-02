@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML Review Website - Lists">
+  <title>Lists | HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.svg" alt="HTML Review logo" width="48" height="48">
+      <div>
+        <p class="site-title">HTML Review Website</p>
+        <p class="site-subtitle">Definitions, attributes and examples of the main HTML tags</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="text.html">Text</a></li>
+        <li><a href="links.html">Links &amp; Media</a></li>
+        <li><a href="lists.html" class="active">Lists</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="media.html">Multimedia</a></li>
+        <li><a href="semantic.html">Semantic</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Page 4 &ndash; Lists</h1>
+      <p>Lists organize information as items. HTML has unordered, ordered and description lists.</p>
+      <ul class="toc">
+        <li><a href="#ul">&lt;ul&gt;</a></li>
+        <li><a href="#ol">&lt;ol&gt;</a></li>
+        <li><a href="#li">&lt;li&gt;</a></li>
+        <li><a href="#nested-lists">Nested lists</a></li>
+        <li><a href="#dl-dt-dd">&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;</a></li>
+      </ul>
+    </section>
+
+    <section class="tag" id="ul">
+      <h2 class="tag-name">&lt;ul&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>An unordered list: items are shown with bullets.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes; bullet style is changed with CSS <code>list-style-type</code>.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ul>
+      </div>
+    </section>
+
+    <section class="tag" id="ol">
+      <h2 class="tag-name">&lt;ol&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>An ordered list: items are numbered.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>type</code></td><td>Kind of numbering: <code>1</code>, <code>A</code>, <code>a</code>, <code>I</code>, <code>i</code>.</td></tr>
+          <tr><td><code>start</code></td><td>First number of the list.</td></tr>
+          <tr><td><code>reversed</code></td><td>Counts down instead of up.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;ol type=&quot;A&quot; start=&quot;3&quot;&gt;
+  &lt;li&gt;Open VS Code&lt;/li&gt;
+  &lt;li&gt;Write the code&lt;/li&gt;
+  &lt;li&gt;Test with Live Server&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<ol type="A" start="3">
+  <li>Open VS Code</li>
+  <li>Write the code</li>
+  <li>Test with Live Server</li>
+</ol>
+      </div>
+    </section>
+
+    <section class="tag" id="li">
+      <h2 class="tag-name">&lt;li&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A list item. It is used inside <code>ul</code> or <code>ol</code>.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>value</code></td><td>Number of this item (only inside <code>ol</code>).</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;ol&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li value=&quot;10&quot;&gt;Tenth&lt;/li&gt;
+  &lt;li&gt;Eleventh&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<ol>
+  <li>First</li>
+  <li value="10">Tenth</li>
+  <li>Eleventh</li>
+</ol>
+      </div>
+    </section>
+
+    <section class="tag" id="nested-lists">
+      <h2 class="tag-name">Nested lists</h2>
+
+      <h3>Definition</h3>
+      <p>A list can be placed inside an <code>li</code> to create sub-items.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Uses the attributes of <code>ul</code>, <code>ol</code> and <code>li</code>.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;Front-end
+    &lt;ul&gt;
+      &lt;li&gt;HTML&lt;/li&gt;
+      &lt;li&gt;CSS&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Back-end&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<ul>
+  <li>Front-end
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+    </ul>
+  </li>
+  <li>Back-end</li>
+</ul>
+      </div>
+    </section>
+
+    <section class="tag" id="dl-dt-dd">
+      <h2 class="tag-name">&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;</h2>
+
+      <h3>Definition</h3>
+      <p>A description list: <code>dt</code> is the term and <code>dd</code> its description.</p>
+
+      <h3>Attributes</h3>
+      <table class="attr-table">
+        <thead>
+          <tr><th>Attribute</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>(none)</code></td><td>Only global attributes.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Example (code)</h3>
+<pre><code>&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;Language that gives the structure of a page.&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Language that gives the style of a page.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+      <h3>Example (result)</h3>
+      <div class="result">
+<dl>
+  <dt>HTML</dt>
+  <dd>Language that gives the structure of a page.</dd>
+  <dt>CSS</dt>
+  <dd>Language that gives the style of a page.</dd>
+</dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML Review Website &copy; 2026 &mdash; Project_fullname1_fullname2</p>
+    <p><a href="#top">Back to top</a> &middot; <a href="index.html">Home</a></p>
+  </footer>
+</body>
+</html>
