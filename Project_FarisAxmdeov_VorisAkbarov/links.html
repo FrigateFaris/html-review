@@ -7,14 +7,14 @@
   <title>Links, image, video, audio | HTML Review</title>
   <link rel="stylesheet" href="css/style.css">
   
-  <!-- Стили для кнопок и переключения секций -->
+
   <style>
-    /* Скрываем все блоки с тегами по умолчанию */
+
     section.tag {
       display: none;
     }
     
-    /* Показываем блок при клике на соответствующую кнопку (через хэш URL) */
+
     section.tag:target {
       display: block;
       animation: fadeIn 0.4s ease-in-out;
@@ -25,7 +25,7 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* --- СТИЛИ ДЛЯ КНОПОК --- */
+
     .button-group {
       display: flex;
       flex-wrap: wrap;
@@ -35,7 +35,7 @@
 
     .btn {
       display: inline-block;
-      background-color: #0056b3; /* Синий цвет кнопки */
+      background-color: #0056b3;
       color: #ffffff;
       padding: 12px 25px;
       text-decoration: none;
@@ -49,12 +49,12 @@
     }
 
     .btn:hover {
-      background-color: #003d82; /* Темно-синий при наведении */
+      background-color: #003d82; 
       color: #ffffff;
     }
 
     .btn:active {
-      transform: translateY(3px); /* Эффект нажатия */
+      transform: translateY(3px); 
       box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
     }
   </style>
@@ -88,7 +88,7 @@
       <h1>Links, Image, Video &amp; Audio</h1>
       <p>These tags connect pages together and add pictures, sound and video to a web page. <strong>Click on a button below to view the topic:</strong></p>
       
-      <!-- Блок с нашими кнопками -->
+
       <div class="button-group">
         <a href="#a" class="btn">Links</a>
         <a href="#img" class="btn">Image</a>
@@ -97,7 +97,7 @@
       </div>
     </section>
 
-    <!-- Секция ссылок -->
+
     <section class="tag" id="a">
       <h2 class="tag-name">&lt;a&gt; (Links)</h2>
       <h3>Definition</h3>
@@ -128,7 +128,7 @@
       </div>
     </section>
 
-    <!-- Секция изображений -->
+
     <section class="tag" id="img">
       <h2 class="tag-name">&lt;img&gt; (Image)</h2>
       <h3>Definition</h3>
@@ -153,7 +153,7 @@
       </div>
     </section>
 
-    <!-- Секция видео -->
+
     <section class="tag" id="video">
       <h2 class="tag-name">&lt;video&gt; (Video)</h2>
       <h3>Definition</h3>
@@ -184,12 +184,12 @@
         </video>
       </div>
       
-      <!-- Тег Source добавлен внутрь видео/аудио логически -->
+
       <h2 class="tag-name" style="margin-top: 30px;">&lt;source&gt;</h2>
       <p>Gives one file (and its format) for an <code>audio</code> or <code>video</code> element. The browser chooses the first one it can read.</p>
     </section>
 
-    <!-- Секция аудио -->
+
     <section class="tag" id="audio">
       <h2 class="tag-name">&lt;audio&gt; (Audio)</h2>
       <h3>Definition</h3>
