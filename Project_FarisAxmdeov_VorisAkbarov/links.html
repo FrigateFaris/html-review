@@ -6,6 +6,58 @@
   <meta name="description" content="HTML Review Website - Links, image, video, audio">
   <title>Links, image, video, audio | HTML Review</title>
   <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Стили для кнопок и переключения секций -->
+  <style>
+    /* Скрываем все блоки с тегами по умолчанию */
+    section.tag {
+      display: none;
+    }
+    
+    /* Показываем блок при клике на соответствующую кнопку (через хэш URL) */
+    section.tag:target {
+      display: block;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* --- СТИЛИ ДЛЯ КНОПОК --- */
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #0056b3; /* Синий цвет кнопки */
+      color: #ffffff;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: background-color 0.3s ease, transform 0.1s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn:hover {
+      background-color: #003d82; /* Темно-синий при наведении */
+      color: #ffffff;
+    }
+
+    .btn:active {
+      transform: translateY(3px); /* Эффект нажатия */
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+    }
+  </style>
 </head>
 <body id="top">
   <header class="site-header">
@@ -33,23 +85,23 @@
 
   <main>
     <section class="intro">
-      <h1>Page 3 &ndash; Links, Image, Video &amp; Audio</h1>
-      <p>These tags connect pages together and add pictures, sound and video to a web page.</p>
-      <ul class="toc">
-        <li><a href="#a">&lt;a&gt;</a></li>
-        <li><a href="#img">&lt;img&gt;</a></li>
-        <li><a href="#audio">&lt;audio&gt;</a></li>
-        <li><a href="#video">&lt;video&gt;</a></li>
-        <li><a href="#source">&lt;source&gt;</a></li>
-      </ul>
+      <h1>Links, Image, Video &amp; Audio</h1>
+      <p>These tags connect pages together and add pictures, sound and video to a web page. <strong>Click on a button below to view the topic:</strong></p>
+      
+      <!-- Блок с нашими кнопками -->
+      <div class="button-group">
+        <a href="#a" class="btn">Links</a>
+        <a href="#img" class="btn">Image</a>
+        <a href="#video" class="btn">Video</a>
+        <a href="#audio" class="btn">Audio</a>
+      </div>
     </section>
 
+    <!-- Секция ссылок -->
     <section class="tag" id="a">
-      <h2 class="tag-name">&lt;a&gt;</h2>
-
+      <h2 class="tag-name">&lt;a&gt; (Links)</h2>
       <h3>Definition</h3>
       <p>A hyperlink. It opens another page, a website, an e-mail or a part of the same page.</p>
-
       <h3>Attributes</h3>
       <table class="attr-table">
         <thead>
@@ -62,28 +114,25 @@
           <tr><td><code>download</code></td><td>Downloads the file instead of opening it.</td></tr>
         </tbody>
       </table>
-
       <h3>Example (code)</h3>
 <pre><code>&lt;a href=&quot;lists.html&quot;&gt;Internal link: Lists page&lt;/a&gt;&lt;br&gt;
 &lt;a href=&quot;https://www.w3schools.com&quot; target=&quot;_blank&quot;&gt;External link: W3Schools&lt;/a&gt;&lt;br&gt;
 &lt;a href=&quot;mailto:info.moumni.nourchen@gmail.com&quot;&gt;Send an e-mail&lt;/a&gt;&lt;br&gt;
 &lt;a href=&quot;#top&quot;&gt;Link to the top of the page&lt;/a&gt;</code></pre>
-
       <h3>Example (result)</h3>
       <div class="result">
-<a href="lists.html">Internal link: Lists page</a><br>
-<a href="https://www.w3schools.com" target="_blank">External link: W3Schools</a><br>
-<a href="mailto:info.moumni.nourchen@gmail.com">Send an e-mail</a><br>
-<a href="#top">Link to the top of the page</a>
+        <a href="lists.html">Internal link: Lists page</a><br>
+        <a href="https://www.w3schools.com" target="_blank">External link: W3Schools</a><br>
+        <a href="mailto:info.moumni.nourchen@gmail.com">Send an e-mail</a><br>
+        <a href="#top">Link to the top of the page</a>
       </div>
     </section>
 
+    <!-- Секция изображений -->
     <section class="tag" id="img">
-      <h2 class="tag-name">&lt;img&gt;</h2>
-
+      <h2 class="tag-name">&lt;img&gt; (Image)</h2>
       <h3>Definition</h3>
       <p>Displays an image. It is an empty tag.</p>
-
       <h3>Attributes</h3>
       <table class="attr-table">
         <thead>
@@ -96,57 +145,19 @@
           <tr><td><code>title</code></td><td>Tooltip text.</td></tr>
         </tbody>
       </table>
-
       <h3>Example (code)</h3>
 <pre><code>&lt;img src=&quot;images/photo.svg&quot; alt=&quot;A landscape&quot; width=&quot;300&quot; height=&quot;200&quot; title=&quot;Landscape&quot;&gt;</code></pre>
-
       <h3>Example (result)</h3>
       <div class="result">
-<img src="images/photo.svg" alt="A landscape" width="300" height="200" title="Landscape">
+        <img src="images/photo.svg" alt="A landscape" width="300" height="200" title="Landscape">
       </div>
     </section>
 
-    <section class="tag" id="audio">
-      <h2 class="tag-name">&lt;audio&gt;</h2>
-
-      <h3>Definition</h3>
-      <p>Plays a sound file in the page.</p>
-
-      <h3>Attributes</h3>
-      <table class="attr-table">
-        <thead>
-          <tr><th>Attribute</th><th>Role</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><code>src</code></td><td>Path of the audio file.</td></tr>
-          <tr><td><code>controls</code></td><td>Shows play, pause and volume buttons.</td></tr>
-          <tr><td><code>autoplay</code></td><td>Starts the sound automatically.</td></tr>
-          <tr><td><code>loop</code></td><td>Plays the sound again and again.</td></tr>
-          <tr><td><code>muted</code></td><td>Starts without sound.</td></tr>
-        </tbody>
-      </table>
-
-      <h3>Example (code)</h3>
-<pre><code>&lt;audio controls&gt;
-  &lt;source src=&quot;images/audio.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
-  Your browser does not support audio.
-&lt;/audio&gt;</code></pre>
-
-      <h3>Example (result)</h3>
-      <div class="result">
-<audio controls>
-  <source src="images/audio.mp3" type="audio/mpeg">
-  Your browser does not support audio.
-</audio>
-      </div>
-    </section>
-
+    <!-- Секция видео -->
     <section class="tag" id="video">
-      <h2 class="tag-name">&lt;video&gt;</h2>
-
+      <h2 class="tag-name">&lt;video&gt; (Video)</h2>
       <h3>Definition</h3>
       <p>Plays a video file in the page.</p>
-
       <h3>Attributes</h3>
       <table class="attr-table">
         <thead>
@@ -160,53 +171,57 @@
           <tr><td><code>autoplay / loop / muted</code></td><td>Automatic start, repeat, no sound.</td></tr>
         </tbody>
       </table>
-
       <h3>Example (code)</h3>
 <pre><code>&lt;video controls width=&quot;320&quot; poster=&quot;images/photo.svg&quot;&gt;
   &lt;source src=&quot;images/video.mp4&quot; type=&quot;video/mp4&quot;&gt;
   Your browser does not support video.
 &lt;/video&gt;</code></pre>
-
       <h3>Example (result)</h3>
       <div class="result">
-<video controls width="320" poster="images/photo.svg">
-  <source src="images/video.mp4" type="video/mp4">
-  Your browser does not support video.
-</video>
+        <video controls width="320" poster="images/photo.svg">
+          <source src="images/video.mp4" type="video/mp4">
+          Your browser does not support video.
+        </video>
       </div>
+      
+      <!-- Тег Source добавлен внутрь видео/аудио логически -->
+      <h2 class="tag-name" style="margin-top: 30px;">&lt;source&gt;</h2>
+      <p>Gives one file (and its format) for an <code>audio</code> or <code>video</code> element. The browser chooses the first one it can read.</p>
     </section>
 
-    <section class="tag" id="source">
-      <h2 class="tag-name">&lt;source&gt;</h2>
-
+    <!-- Секция аудио -->
+    <section class="tag" id="audio">
+      <h2 class="tag-name">&lt;audio&gt; (Audio)</h2>
       <h3>Definition</h3>
-      <p>Gives one file (and its format) for an <code>audio</code> or <code>video</code> element. The browser chooses the first one it can read.</p>
-
+      <p>Plays a sound file in the page.</p>
       <h3>Attributes</h3>
       <table class="attr-table">
         <thead>
           <tr><th>Attribute</th><th>Role</th></tr>
         </thead>
         <tbody>
-          <tr><td><code>src</code></td><td>Path of the media file.</td></tr>
-          <tr><td><code>type</code></td><td>Format of the file, e.g. <code>video/mp4</code>, <code>audio/mpeg</code>.</td></tr>
+          <tr><td><code>src</code></td><td>Path of the audio file.</td></tr>
+          <tr><td><code>controls</code></td><td>Shows play, pause and volume buttons.</td></tr>
+          <tr><td><code>autoplay</code></td><td>Starts the sound automatically.</td></tr>
+          <tr><td><code>loop</code></td><td>Plays the sound again and again.</td></tr>
+          <tr><td><code>muted</code></td><td>Starts without sound.</td></tr>
         </tbody>
       </table>
-
       <h3>Example (code)</h3>
 <pre><code>&lt;audio controls&gt;
   &lt;source src=&quot;images/audio.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
   &lt;source src=&quot;images/audio.wav&quot; type=&quot;audio/wav&quot;&gt;
+  Your browser does not support audio.
 &lt;/audio&gt;</code></pre>
-
       <h3>Example (result)</h3>
       <div class="result">
-<audio controls>
-  <source src="images/audio.mp3" type="audio/mpeg">
-  <source src="images/audio.wav" type="audio/wav">
-</audio>
+        <audio controls>
+          <source src="images/audio.mp3" type="audio/mpeg">
+          <source src="images/audio.wav" type="audio/wav">
+        </audio>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
